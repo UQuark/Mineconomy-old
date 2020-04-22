@@ -1,5 +1,6 @@
 package me.uquark.mineconomy.block;
 
+import me.uquark.mineconomy.Mineconomy;
 import me.uquark.mineconomy.item.GalleonItem;
 import me.uquark.mineconomy.item.Items;
 import me.uquark.mineconomy.item.KnutItem;
@@ -16,6 +17,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.state.StateManager;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
+import net.minecraft.util.Identifier;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
@@ -24,7 +26,7 @@ public abstract class AbstractCoinExchangerBlock extends AbstractHorizontalFacin
     protected AbstractCoinExchangerBlock(String name) {
         super(
             name,
-            FabricBlockSettings.of(Material.METAL).strength(-1, 18000000).dropsNothing().build(),
+            FabricBlockSettings.of(Material.METAL).strength(5, 6),
             new Item.Settings().group(ItemGroup.MISC).maxCount(64)
         );
     }

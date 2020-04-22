@@ -1,6 +1,8 @@
 package me.uquark.mineconomy.block;
 
 import me.uquark.mineconomy.Mineconomy;
+import net.fabricmc.fabric.api.block.FabricBlockSettings;
+import net.minecraft.block.Blocks;
 import net.minecraft.block.HorizontalFacingBlock;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -11,8 +13,8 @@ public abstract class AbstractHorizontalFacingBlock extends HorizontalFacingBloc
     public final Identifier id;
     public final BlockItem item;
 
-    protected AbstractHorizontalFacingBlock(String name, Settings blockSettings, Item.Settings itemSettings) {
-        super(blockSettings);
+    protected AbstractHorizontalFacingBlock(String name, FabricBlockSettings blockSettings, Item.Settings itemSettings) {
+        super(blockSettings.build());
         id = new Identifier(Mineconomy.modid, name);
         item = new BlockItem(this, itemSettings);
     }
