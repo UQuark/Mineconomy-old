@@ -2,10 +2,13 @@ package me.uquark.mineconomy;
 
 import me.uquark.mineconomy.block.Blocks;
 import me.uquark.mineconomy.item.Items;
+import me.uquark.quarkcore.base.AbstractMod;
 import net.fabricmc.api.ModInitializer;
 
-public class Mineconomy implements ModInitializer {
-    public static final String modid = "mineconomy";
+public class Mineconomy extends AbstractMod implements ModInitializer {
+    public Mineconomy() {
+        super("mineconomy");
+    }
 
     @Override
     public void onInitialize() {

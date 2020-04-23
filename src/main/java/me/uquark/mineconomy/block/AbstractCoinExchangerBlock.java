@@ -5,6 +5,7 @@ import me.uquark.mineconomy.item.GalleonItem;
 import me.uquark.mineconomy.item.Items;
 import me.uquark.mineconomy.item.KnutItem;
 import me.uquark.mineconomy.item.SickleItem;
+import me.uquark.quarkcore.block.AbstractHorizontalFacingBlock;
 import net.fabricmc.fabric.api.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -25,6 +26,7 @@ import net.minecraft.world.World;
 public abstract class AbstractCoinExchangerBlock extends AbstractHorizontalFacingBlock {
     protected AbstractCoinExchangerBlock(String name) {
         super(
+            Mineconomy.INSTANCE,
             name,
             FabricBlockSettings.of(Material.METAL).strength(5, 6),
             new Item.Settings().group(ItemGroup.MISC).maxCount(64)

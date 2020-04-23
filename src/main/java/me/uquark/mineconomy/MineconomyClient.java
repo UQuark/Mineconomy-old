@@ -8,5 +8,6 @@ public class MineconomyClient implements ClientModInitializer {
 
     @Override
     public void onInitializeClient() {
+        Mineconomy.INSTANCE.huds.add(balanceHud);
     }
 }

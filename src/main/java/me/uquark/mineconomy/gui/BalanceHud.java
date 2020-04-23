@@ -1,11 +1,11 @@
 package me.uquark.mineconomy.gui;
 
 import me.uquark.mineconomy.item.AbstractCoinItem;
+import me.uquark.quarkcore.gui.AbstractHud;
 import net.minecraft.client.MinecraftClient;
-import net.minecraft.client.gui.DrawableHelper;
 import net.minecraft.item.ItemStack;
 
-public class BalanceHud extends DrawableHelper {
+public class BalanceHud extends AbstractHud {
     private final MinecraftClient client = MinecraftClient.getInstance();
     private float balance;
 
@@ -21,6 +21,7 @@ public class BalanceHud extends DrawableHelper {
             }
     }
 
+    @Override
     public void render() {
         drawString(
             client.textRenderer,
