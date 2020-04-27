@@ -8,7 +8,7 @@ public abstract class AbstractCoinItem extends AbstractItem {
     public final float value;
 
     public AbstractCoinItem(String name, float value) {
-        super(Mineconomy.INSTANCE, name, new Settings().group(ItemGroup.MISC).maxCount(64));
+        super(Mineconomy.modid, name, new Settings().group(ItemGroup.MISC).maxCount(64));
         this.value = value;
     }
 }

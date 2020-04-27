@@ -26,7 +26,7 @@ import net.minecraft.world.World;
 public abstract class AbstractCoinExchangerBlock extends AbstractHorizontalFacingBlock {
     protected AbstractCoinExchangerBlock(String name) {
         super(
-            Mineconomy.INSTANCE,
+            Mineconomy.modid,
             name,
             FabricBlockSettings.of(Material.METAL).strength(5, 6),
             new Item.Settings().group(ItemGroup.MISC).maxCount(64)
