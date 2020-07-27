@@ -36,7 +36,7 @@ public abstract class AbstractCoinExchangerBlock extends AbstractHorizontalFacin
     protected void packMoney(PlayerEntity player) {
         int galleons = 0, sickles = 0, knuts = 0;
         for (int i = 0; i <= 45; i++) {
-            ItemStack itemStack = player.inventory.getInvStack(i);
+            ItemStack itemStack = player.inventory.getStack(i);
             if (player.getMainHandStack() == itemStack)
                 continue;
             if (itemStack.getItem() instanceof GalleonItem) {
