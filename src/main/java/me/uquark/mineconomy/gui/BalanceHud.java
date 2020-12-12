@@ -12,10 +12,10 @@ public class BalanceHud extends AbstractHud {
 
     public void updateBalance() {
         if (client.player != null)
-            if (client.player.inventory != null) {
+            if (client.player.getInventory() != null) {
                 balance = 0;
                 for (int i=0; i <= 35; i++) {
-                    ItemStack itemStack = client.player.inventory.getStack(i);
+                    ItemStack itemStack = client.player.getInventory().getStack(i);
                     if (itemStack != null && itemStack.getItem() instanceof AbstractCoinItem)
                         balance += ((AbstractCoinItem) itemStack.getItem()).value * itemStack.getCount();
                 }
